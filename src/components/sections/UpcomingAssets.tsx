@@ -63,7 +63,7 @@ export default function UpcomingAssets() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         {/* Title */}
-        <div className="text-center mb-20 opacity-0 translate-y-8 animate-[fadeInUp_0.8s_ease-out_0.1s_forwards]">
+        <div className="text-center mb-20 translate-y-8 animate-[fadeInUp_0.8s_ease-out_0.1s_forwards]">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
             Upcoming
           </h2>
