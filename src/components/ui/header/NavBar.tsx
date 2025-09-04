@@ -17,7 +17,6 @@ export default function Navbar() {
     { name: "Community ", href: "#Community " },
   ];
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -26,7 +25,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when clicking outside or on link
   useEffect(() => {
     const handleClickOutside = () => {
       if (open) setOpen(false);

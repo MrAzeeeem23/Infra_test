@@ -60,7 +60,7 @@ export default function NewsletterSection() {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: i * 0.15 }}
-                whileHover={{ scale: 1.05, rotateX: 5, rotateY: -5 }}
+                // whileHover={{ scale: 1.05, rotateX: 5, rotateY: -5 }}
                 className="p-6 rounded-2xl bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 shadow-[0_0_25px_rgba(255,90,30,0.15)] hover:shadow-[0_0_35px_rgba(255,90,30,0.35)] transition-all"
               >
                 <div className="flex items-center gap-4">
@@ -83,11 +83,11 @@ export default function NewsletterSection() {
           <a
             href="https://infrathrone.xyz/newsletter"
             target="_blank"
-            className="inline-flex items-center gap-3 px-10 py-4 rounded-2xl text-lg font-semibold border border-white/10
-                       hover:shadow-[0_0_40px_rgba(255,90,30,0.45)] hover:scale-105 transition-all"
+            className="inline-flex items-center uppercase gap-3 px-10 py-4 rounded-4xl text-lg border border-white/10
+                       hover:shadow-[0_0_40px_rgba(255,90,30,0.45)] transition-all"
           >
             <Mail className="w-6 h-6" />
-            Join the Newsletter →
+            Join the Newsletter 
           </a>
         </motion.div>
       </div>

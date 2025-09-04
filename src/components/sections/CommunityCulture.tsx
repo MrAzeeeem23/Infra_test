@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, Headphones, Flame } from "lucide-react";
+import { Users, Headphones, Flame, ArrowUpRight } from "lucide-react";
 
 const items = [
   {
@@ -24,8 +24,10 @@ const items = [
 
 const CommunityCulture = () => {
   return (
-    <section className="relative text-gray-200 py-20 px-6 lg:px-16 overflow-hidden" id="Community">
-  
+    <section
+      className="relative text-gray-200 py-20 px-6 lg:px-16 overflow-hidden"
+      id="Community"
+    >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.08]"
         style={{
@@ -45,30 +47,35 @@ const CommunityCulture = () => {
         {/* Heading (unchanged) */}
         <div className="mb-20">
           <h2 className="text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent leading-[1.1]">
-            Community & <span className="text-orange-300">Culture</span>
+            Community & Culture
           </h2>
           <p className="mt-6 text-zinc-400 text-lg max-w-3xl mx-auto px-4 font-light">
             Built by engineers who survived 3 AM outages{" "}
-            <span className="text-amber-600">— so you don’t have to.</span>
+            <span className="text-[#ff5f1f]">— so you don’t have to.</span>
           </p>
         </div>
 
-        <div className="space-y-12 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
           {items.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -60 : 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: i * 0.2 }}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="flex items-start gap-5"
+              className="flex flex-col items-start gap-14 p-6"
             >
+              {/* Icon */}
               <div className="flex-shrink-0">
-                <item.icon className="w-10 h-10 text-orange-500" />
+                <item.icon className="w-12 h-12 text-[#ff5f1f]" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                <p className="text-gray-400 text-sm mt-2 leading-relaxed">
+
+              {/* Title + Desc */}
+              <div className="flex flex-col gap-2 text-left">
+                <h3 className="text-lg sm:text-xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -82,9 +89,9 @@ const CommunityCulture = () => {
             href="https://discord.gg/infrathrone"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 rounded-xl text-lg font-semibold bg-orange-500 text-white shadow-md hover:bg-orange-600 transition"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm sm:text-base uppercase border border-white/10 hover:border-orange-400/40 hover:shadow-[0_0_32px_rgba(255,90,30,0.35)] transition-all"
           >
-            Join the Community →
+            Join the Community <ArrowUpRight className="w-4 h-4" />
           </a>
         </div>
       </motion.div>

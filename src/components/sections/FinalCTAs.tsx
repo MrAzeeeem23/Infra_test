@@ -63,22 +63,22 @@ export default function FinalCTAs() {
         >
           {[
             {
-              icon: <Flame className="w-7 h-7 text-orange-400" />,
+              icon: <Flame className="w-7 h-7 text-[#ff5f1f]" />,
               text: "Join Elite Program",
               link: "https://elite.infrathrone.xyz",
             },
             {
-              icon: <Laptop className="w-7 h-7 text-orange-400" />,
+              icon: <Laptop className="w-7 h-7 text-[#ff5f1f]" />,
               text: "Start with Live Projects",
               link: "https://build.infrathrone.xyz",
             },
             {
-              icon: <PhoneCall className="w-7 h-7 text-orange-400" />,
+              icon: <PhoneCall className="w-7 h-7 text-[#ff5f1f]" />,
               text: "1:1 Guidance",
               link: "https://topmate.io/infrathrone",
             },
             {
-              icon: <Globe className="w-7 h-7 text-orange-400" />,
+              icon: <Globe className="w-7 h-7 text-[#ff5f1f]" />,
               text: "Hire Us for Consulting",
               link: "https://fiverr.com/infrathrone",
             },

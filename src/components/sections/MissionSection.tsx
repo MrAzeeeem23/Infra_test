@@ -6,27 +6,27 @@ import { Target, Cloud, ServerCog, Rocket, Users } from "lucide-react";
 
 const audience = [
   {
-    icon: <Target className="w-8 h-8 text-orange-500" />,
+    icon: <Target className="w-8 h-8 text-[#ff5f1f]" />,
     title: "DevOps Engineers",
     desc: "Sharpen your skills and master infra at scale.",
   },
   {
-    icon: <Cloud className="w-8 h-8 text-orange-500" />,
+    icon: <Cloud className="w-8 h-8 text-[#ff5f1f]" />,
     title: "Cloud Architects",
     desc: "Design production-ready cloud systems with confidence.",
   },
   {
-    icon: <ServerCog className="w-8 h-8 text-orange-500" />,
+    icon: <ServerCog className="w-8 h-8 text-[#ff5f1f]" />,
     title: "Platform / SREs",
     desc: "Build reliability, automate ops, and tame incidents.",
   },
   {
-    icon: <Rocket className="w-8 h-8 text-orange-500" />,
+    icon: <Rocket className="w-8 h-8 text-[#ff5f1f]" />,
     title: "Aspiring Infra Leaders",
     desc: "Grow from tool-user to decision-maker with real context.",
   },
   {
-    icon: <Users className="w-8 h-8 text-orange-500" />,
+    icon: <Users className="w-8 h-8 text-[#ff5f1f]" />,
     title: "Scaling Startups",
     desc: "Scale infra with limited hands, without breaking things.",
   },
@@ -52,18 +52,18 @@ const MissionSection = () => {
         className="max-w-6xl mx-auto text-center relative z-10"
       >
         <div className="mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
-            InfraThrone’s <span className="text-orange-500">Mission</span>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent">
+            InfraThrone{"'"}s Mission
           </h2>
           <p className="mt-6 text-zinc-400 text-lg max-w-3xl mx-auto font-light">
             We’re building a{" "}
-            <span className="text-white font-medium">movement</span> where
+            <span className="text-white ">movement</span> where
             engineers don’t just learn tools — they{" "}
-            <span className="text-orange-500 font-semibold">
+            <span className="text-[#ff5f1f] ">
               think like architects, act like SREs
             </span>
             , and{" "}
-            <span className="text-orange-400 font-semibold">
+            <span className="text-[#ff5f1f]">
               lead with production context
             </span>
             .
@@ -114,14 +114,14 @@ const MissionSection = () => {
                 } justify-center`}
               >
                 <div
-                  className={`bg-[#1a1a1a] border border-gray-800 rounded-2xl p-6 shadow-xl relative group hover:shadow-orange-500/20 transition
+                  className={`bg-[#1a1a1a]/50 rounded-2xl p-6 shadow-xl relative group hover:shadow-[0_0_40px_rgba(255,90,30,0.20)] transition
                   w-full md:w-[42%]
                   ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"}
                   pl-10 pr-10 md:pl-6 md:pr-6`}
                 >
                   <div className="flex items-center gap-3 mb-3">
                     {item.icon}
-                    <h3 className="text-lg font-semibold text-white">
+                    <h3 className="text-lg font-semibold bg-gradient-to-r from-white via-zinc-300 to-zinc-400 bg-clip-text text-transparent">
                       {item.title}
                     </h3>
                   </div>

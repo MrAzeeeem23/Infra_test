@@ -20,27 +20,30 @@ const assets = [
     icon: Book,
     title: "War Room Engineer Book",
     desc: "50+ real-world RCAs, troubleshooting techniques & much more",
-    color: "from-orange-500 to-orange-600",
+    color: "from-orange-500/10 to-orange-600/20",
+    className: "bg-gradient-to-br from-emerald-400/20 to-emerald-600/10 backdrop-blur-xl"
   },
   {
     icon: Cpu,
     title: "AI + System Design Book",
     desc: "Modern architecture decoded with AI-infra integration",
-    color: "from-orange-400 to-pink-500",
+    color: "from-orange-400 to-orange-500",
+    className: "bg-gradient-to-br from-blue-400/20 to-blue-600/10 backdrop-blur-xl "
   },
   {
     icon: Terminal,
     title: "DevOps Interview Question Bank",
     desc: "Battle-tested questions from top-tier companies",
     color: "from-yellow-500 to-orange-500",
+    className: "bg-gradient-to-br from-violet-400/20 to-violet-600/10 backdrop-blur-xl"
   },
 ];
 
 export default function UpcomingAssets() {
   return (
     <section className="relative w-full py-24 text-white overflow-hidden">
-      {/* Background gradients */}
-      <motion.div
+   
+      {/* <motion.div
         animate={{ scale: [1, 1.05, 1] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         className="pointer-events-none absolute -top-44 -left-40 h-[28rem] w-[28rem] rounded-full bg-red-600/10 blur-[120px]"
@@ -48,10 +51,10 @@ export default function UpcomingAssets() {
       <motion.div
         animate={{ scale: [1, 1.08, 1] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="pointer-events-none absolute -bottom-40 -right-40 h-[30rem] w-[30rem] rounded-full bg-violet-500/20 blur-[140px]"
-      />
+        className="pointer-events-none absolute -bottom-50 -right-50 h-[30rem] w-[30rem] rounded-full bg-violet-500/20 blur-[140px]"
+      /> */}
 
-      {/* subtle grid pattern */}
+   
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
         style={{
@@ -60,7 +63,6 @@ export default function UpcomingAssets() {
           backgroundSize: "22px 22px",
         }}
       />
-
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         {/* Title */}
         <div className="text-center mb-20 translate-y-8 animate-[fadeInUp_0.8s_ease-out_0.1s_forwards]">
@@ -87,13 +89,12 @@ export default function UpcomingAssets() {
                     isLeft ? "md:justify-start" : "md:justify-end"
                   }`}
                 >
-                  {/* connector dot (hidden on mobile) */}
-                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-red-500 shadow-lg shadow-orange-500/50" />
+                 
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-red-500 hover:shadow-[0_0_40px_rgba(255,90,30,0.45)]" />
 
                   <div
-                    className={`w-full max-w-sm p-6 rounded-2xl bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] border border-gray-800 shadow-xl group hover:shadow-orange-500/30 transition
-                      ${isLeft ? "md:mr-auto md:text-left" : "md:ml-auto md:text-left"} 
-                      text-left`}
+                    className={`w-full max-w-sm p-6 rounded-2xl border border-gray-800 shadow-xl group hover:shadow-[0_0_40px_rgba(255,90,30,0.45)] transition
+                      ${isLeft ? "md:mr-auto md:text-left" : "md:ml-auto md:text-left"} ${asset.className} text-left`}
                   >
                     <div
                       className={`w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-r ${asset.color} text-white mb-5`}
@@ -101,7 +102,7 @@ export default function UpcomingAssets() {
                       <asset.icon className="w-7 h-7" />
                     </div>
                     <h3
-                      className={`${inter.className} text-xl font-semibold mb-3 group-hover:text-orange-400`}
+                      className={`${inter.className} text-xl font-semibold mb-3 group-hover:text-[#ff5f1f]`}
                     >
                       {asset.title}
                     </h3>
