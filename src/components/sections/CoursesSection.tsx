@@ -46,7 +46,7 @@ export default function CoursesSection() {
           </h2>
           <p className="mt-6 text-zinc-400 text-lg max-w-3xl mx-auto px-4 font-light">
             The bootcamp where DevOps turns into{" "}
-            <span className="text-amber-600 font-medium">
+            <span className="text-[#ff5f1f] font-medium">
               battlefield-tested experience
             </span>
             .

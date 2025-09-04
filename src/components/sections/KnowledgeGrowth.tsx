@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { PlayCircle } from "lucide-react";
 import { JetBrains_Mono } from "next/font/google";
 import Image from "next/image";
-import infrothrone from "../../../public/infrathrone.webp"
+// import youtubeThum from "/Thumbnail.png"
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -33,12 +33,12 @@ export default function KnowledgeGrowth() {
         >
         
           <div className="mb-20 translate-y-8 animate-[fadeInUp_0.8s_ease-out_0.1s_forwards]">
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent leading-[1.1]">
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-white via-zinc-200 to-zinc-600 bg-clip-text text-transparent leading-[1.1]">
             Knowledge <span className="text-white/90">&</span> Growth
             </h2>
             <p className="mt-6 text-zinc-400 text-lg max-w-3xl mx-auto font-light">
               The bootcamp where DevOps turns into{" "}
-              <span className="text-amber-600 font-medium">
+              <span className="text-[#ff5f1f] font-medium">
                 battlefield-tested experience
               </span>
               .
@@ -48,10 +48,10 @@ export default function KnowledgeGrowth() {
             className={`${jetbrainsMono.className} text-lg md:text-xl text-gray-300 max-w-xl mb-10 leading-relaxed`}
           >
             YouTube – Learn from{" "}
-            <span className="text-orange-400">Real Outages</span>. DevOps
+            <span className="text-[#ff5f1f]">Real Outages</span>. DevOps
             deep-dives, outage walkthroughs, mock interviews, and guest infra
             breakdowns{" "}
-            <span className="text-orange-500">(Netflix, Microsoft, etc.)</span>.
+            <span className="text-[#ff5f1f]">(Netflix, Microsoft, etc.)</span>.
           </p>
 
           <motion.a
@@ -76,11 +76,11 @@ export default function KnowledgeGrowth() {
         >
           <div className="relative rounded-2xl overflow-hidden shadow-xl border border-white/10">
             <Image
-              src={infrothrone}
+              src={"/Thumbnail.png"}
               alt="InfraThrone YouTube Preview"
               width={500}
-              height={500}
-              className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition"
+              height={400}
+              className="w-full h-auto object-fit opacity-90 group-hover:opacity-100 transition"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex items-center justify-center">
@@ -91,7 +91,7 @@ export default function KnowledgeGrowth() {
           </div>
           <p className="mt-4 text-center text-sm text-zinc-400">
             Exclusive learning content on{" "}
-            <span className="text-orange-400 font-medium">
+            <span className="text-[#ff5f1f] font-medium">
               InfraThrone’s YouTube
             </span>
           </p>
